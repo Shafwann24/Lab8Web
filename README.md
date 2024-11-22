@@ -353,6 +353,14 @@ Form Action: Form tersebut mengirimkan data ke file ubah.php, yang bertugas memp
 
 <h2>11. Menghapus Data</h2>
 
+        <?php
+        include_once 'koneksi.php';
+        $id = $_GET['id'];
+        $sql = "DELETE FROM data_barang WHERE id_barang = '{$id}'";
+        $result = mysqli_query($conn, $sql);
+        header('location: index.php');
+        ?>
+
 ![image](https://github.com/user-attachments/assets/46af6ebf-6b9c-4c93-935f-748400de0e4c)
 
 
