@@ -348,6 +348,7 @@ Form HTML: Kode menghasilkan form untuk mengubah data barang. Nilai default pada
 
 Form Action: Form tersebut mengirimkan data ke file ubah.php, yang bertugas memproses dan menyimpan pembaruan data barang.
 
+
 <h2>11. Menghapus Data (Delete)</h2>
 
 ![image](https://github.com/user-attachments/assets/46af6ebf-6b9c-4c93-935f-748400de0e4c)
