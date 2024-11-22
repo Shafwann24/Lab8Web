@@ -342,7 +342,7 @@ Query Database: Kode melakukan pengambilan data dari tabel data_barang berdasark
 
 Menyimpan Data: Data yang berhasil diambil dari database disimpan dalam variabel seperti $nama, $kategori, $harga_jual, dan variabel lainnya untuk memudahkan pengolahan.
 
-Fungsi is_select: Fungsi ini digunakan untuk menentukan opsi yang sesuai dalam elemen dropdown (<select>) berdasarkan data yang diambil.
+Fungsi is_select: Fungsi ini digunakan untuk menentukan opsi yang sesuai dalam elemen dropdown (select) berdasarkan data yang diambil.
 
 Form HTML: Kode menghasilkan form untuk mengubah data barang. Nilai default pada form ini diisi dengan data dari database, seperti nama, kategori, harga jual, dan lainnya. Form juga menyediakan opsi untuk mengunggah gambar baru.
 
