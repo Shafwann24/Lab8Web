@@ -12,5 +12,12 @@
 
 ![image](https://github.com/user-attachments/assets/27416646-a0df-4055-9295-edc20ab3008a)
 
+<h2>4. Kemudian Membuat Item data pada data_barang yang sebelumnya sudah dibuat Membuatnya bisa melalui phpMyAdmin dan juga bisa dibuat melalui terminal dibuatnya dengan perintah INSERT INTO
+</h2>
+
+![image](https://github.com/user-attachments/assets/7dd1c0a9-1c07-45b2-a9a1-b4360b42c06f)
+
+
+
 
 ![image](https://github.com/user-attachments/assets/8846f708-395e-4cea-81c3-82f637e74e5e)
