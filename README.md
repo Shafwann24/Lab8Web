@@ -349,10 +349,8 @@ Form HTML: Kode menghasilkan form untuk mengubah data barang. Nilai default pada
 Form Action: Form tersebut mengirimkan data ke file ubah.php, yang bertugas memproses dan menyimpan pembaruan data barang.
 
 
-
-
-
 <h1>11. Menghapus data</h1>
+
 
         <?php
         include_once 'koneksi.php';
@@ -361,6 +359,7 @@ Form Action: Form tersebut mengirimkan data ke file ubah.php, yang bertugas memp
         $result = mysqli_query($conn, $sql);
         header('location: index.php');
         ?>
+
 
 ![image](https://github.com/user-attachments/assets/46af6ebf-6b9c-4c93-935f-748400de0e4c)
 
