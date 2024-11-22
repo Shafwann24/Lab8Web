@@ -354,6 +354,7 @@ Form Action: Form tersebut mengirimkan data ke file ubah.php, yang bertugas memp
 ![image](https://github.com/user-attachments/assets/46af6ebf-6b9c-4c93-935f-748400de0e4c)
 
 
+
 setelah mengetik url 'hapus.php' website akan beralih ke location index.php sesuai dengan perintahnya.
 
 ![image](https://github.com/user-attachments/assets/a659faed-8306-45dd-a958-3d627aff6977)
