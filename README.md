@@ -351,7 +351,10 @@ Form Action: Form tersebut mengirimkan data ke file ubah.php, yang bertugas memp
 
 <hr> <br> 
 
-<h2>11. Menghapus Data</h2>
+
+
+
+<h1>Menghapus data</h1>
 
         <?php
         include_once 'koneksi.php';
