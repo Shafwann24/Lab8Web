@@ -349,8 +349,6 @@ Form HTML: Kode menghasilkan form untuk mengubah data barang. Nilai default pada
 Form Action: Form tersebut mengirimkan data ke file ubah.php, yang bertugas memproses dan menyimpan pembaruan data barang.
 
 
-<hr> <br> 
-
 
 
 
