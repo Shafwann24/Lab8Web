@@ -249,6 +249,114 @@ Redirect: Setelah data berhasil ditambahkan, pengguna akan diarahkan kembali ke 
 Form HTML: Formulir HTML disediakan untuk menambah data barang, termasuk input untuk nama, kategori, harga jual, harga beli, stok, dan gambar. Form ini menggunakan metode POST dengan tipe multipart/form-data untuk mengakomodasi pengunggahan file.
 
 
+<h2>10. Mengubah Data (Update)</h2>
+
+        <?php
+        error_reporting(E_ALL);
+        include_once 'koneksi.php';
+        
+        // Validasi parameter ID
+        if (!isset($_GET['id']) || empty($_GET['id'])) {
+            die('Error: ID tidak ditemukan di URL.');
+        }
+        $id = $_GET['id'];
+        
+        // Query untuk mendapatkan data berdasarkan ID
+        $sql = "SELECT * FROM data_barang WHERE id_barang = '{$id}'";
+        $result = mysqli_query($conn, $sql);
+        
+        if (!$result || mysqli_num_rows($result) == 0) {
+            die('Error: Data tidak ditemukan di database.');
+        }
+        
+        $data = mysqli_fetch_array($result);
+        
+        // Variabel untuk memuat data
+        $nama = $data['nama'];
+        $kategori = $data['kategori'];
+        $harga_jual = $data['harga_jual'];
+        $harga_beli = $data['harga_beli'];
+        $stok = $data['stok'];
+        
+        function is_select($var, $val) {
+            return $var == $val ? 'selected="selected"' : '';
+        }
+        ?>
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <link href="style.css" rel="stylesheet" type="text/css" />
+            <title>Ubah Barang</title>
+        </head>
+        <body>
+        <div class="container">
+            <h1>Ubah Barang</h1>
+            <div class="main">
+                <form method="post" action="ubah.php" enctype="multipart/form-data">
+                    <div class="input">
+                        <label>Nama Barang</label>
+                        <input type="text" name="nama" value="<?php echo $nama; ?>" />
+                    </div>
+                    <div class="input">
+                        <label>Kategori</label>
+                        <select name="kategori">
+                            <option <?php echo is_select('Komputer', $kategori); ?> value="Komputer">Komputer</option>
+                            <option <?php echo is_select('Elektronik', $kategori); ?> value="Elektronik">Elektronik</option>
+                            <option <?php echo is_select('Hand Phone', $kategori); ?> value="Hand Phone">Hand Phone</option>
+                        </select>
+                    </div>
+                    <div class="input">
+                        <label>Harga Jual</label>
+                        <input type="text" name="harga_jual" value="<?php echo $harga_jual; ?>" />
+                    </div>
+                    <div class="input">
+                        <label>Harga Beli</label>
+                        <input type="text" name="harga_beli" value="<?php echo $harga_beli; ?>" />
+                    </div>
+                    <div class="input">
+                        <label>Stok</label>
+                        <input type="text" name="stok" value="<?php echo $stok; ?>" />
+                    </div>
+                    <div class="input">
+                        <label>File Gambar</label>
+                        <input type="file" name="file_gambar" />
+                    </div>
+                    <div class="submit">
+                        <input type="hidden" name="id" value="<?php echo $id; ?>" />
+                        <input type="submit" name="submit" value="Simpan" />
+                    </div>
+                </form>
+            </div>
+        </div>
+        </body>
+        </html>
+
+![image](https://github.com/user-attachments/assets/8536d752-6bea-4d42-896b-f6b2e747ed53)
+
+Error Reporting: Fungsi error_reporting(E_ALL); digunakan untuk menampilkan semua jenis error yang terjadi saat kode PHP dijalankan.
+
+Validasi ID: Kode memeriksa apakah parameter id tersedia di URL dan tidak kosong. Jika parameter ini tidak ditemukan, sistem akan menampilkan pesan error.
+
+Query Database: Kode melakukan pengambilan data dari tabel data_barang berdasarkan id_barang yang dikirim melalui URL. Jika data barang tidak ditemukan, pesan error akan ditampilkan.
+
+Menyimpan Data: Data yang berhasil diambil dari database disimpan dalam variabel seperti $nama, $kategori, $harga_jual, dan variabel lainnya untuk memudahkan pengolahan.
+
+Fungsi is_select: Fungsi ini digunakan untuk menentukan opsi yang sesuai dalam elemen dropdown (<select>) berdasarkan data yang diambil.
+
+Form HTML: Kode menghasilkan form untuk mengubah data barang. Nilai default pada form ini diisi dengan data dari database, seperti nama, kategori, harga jual, dan lainnya. Form juga menyediakan opsi untuk mengunggah gambar baru.
+
+Form Action: Form tersebut mengirimkan data ke file ubah.php, yang bertugas memproses dan menyimpan pembaruan data barang.
+
+<h2>11. Menghapus Data (Delete)</h2>
+
+![image](https://github.com/user-attachments/assets/46af6ebf-6b9c-4c93-935f-748400de0e4c)
+
+setelah mengetik url 'hapus.php' website akan beralih ke location index.php sesuai dengan perintahnya.
+
+![image](https://github.com/user-attachments/assets/a659faed-8306-45dd-a958-3d627aff6977)
+
+
 
 
 
