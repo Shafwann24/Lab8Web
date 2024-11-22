@@ -17,6 +17,23 @@
 
 ![image](https://github.com/user-attachments/assets/7dd1c0a9-1c07-45b2-a9a1-b4360b42c06f)
 
+<h2>5. Kemudian untuk Menjalankan database ini ke sebuah website local Pertama kita harus membuat folder di htdocs caranya
+buka File Explorer -> xampp -> htdocs -. buat folder di dalam htdocs dengan lab8_php_database.</h2>
+
+![image](https://github.com/user-attachments/assets/e4953f57-9087-478f-848e-3f6eeec57068)
+
+<h2>6. ketika sudah membuat folder kemudian kita cek foldernya sudah bisa tersambung dengan localhost kita di broser Buka browser -> lalu ketik di colom pencarian -> localhost/lab8_php/database/</h2>
+
+![image](https://github.com/user-attachments/assets/7d1a5fbd-e3e4-466b-be38-68983d714726)
+
+
+
+
+
+
+
+
+
 
 
 
